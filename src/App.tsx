@@ -65,7 +65,7 @@ function App() {
       if (profileObj) {
         try {
           const response = await axios.post(
-            "http://localhost:8000/api/v1/users",
+            "https://propello.herokuapp.com/api/v1/users",
             {
               name: profileObj.name,
               email: profileObj.email,
@@ -144,7 +144,7 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("http://localhost:8000/api/v1")}
+          dataProvider={dataProvider("https://propello.herokuapp.com")}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
